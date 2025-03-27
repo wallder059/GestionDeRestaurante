@@ -6,8 +6,8 @@ public class FoodTruck extends Restaurante {
     private double costoMenuFijo;
 
     public FoodTruck(String nombre, String ubicacion, int capacidad, String tipoCocina, double calificacionMedia,
-                     String areaRecorrido, String especialidad, double costoMenuFijo) {
-        super(nombre, ubicacion, capacidad, tipoCocina, calificacionMedia);
+                     String areaRecorrido, String especialidad, double costoMenuFijo,int clientesServidos) {
+        super(nombre, ubicacion, capacidad, tipoCocina, calificacionMedia, clientesServidos);
         this.areaRecorrido = areaRecorrido;
         this.especialidad = especialidad;
         this.costoMenuFijo = costoMenuFijo;

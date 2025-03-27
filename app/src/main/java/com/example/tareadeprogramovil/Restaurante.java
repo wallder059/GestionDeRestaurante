@@ -6,17 +6,30 @@ public class Restaurante {
     protected int capacidad;
     protected String tipoCocina;
     protected double calificacionMedia;
+    protected int clientesServidos; // nuevo atributo
 
-    public Restaurante(String nombre, String ubicacion, int capacidad, String tipoCocina, double calificacionMedia) {
+    public Restaurante(String nombre, String ubicacion, int capacidad, String tipoCocina,
+                       double calificacionMedia, int clientesServidos) {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
         this.capacidad = capacidad;
         this.tipoCocina = tipoCocina;
         this.calificacionMedia = calificacionMedia;
+        this.clientesServidos = clientesServidos;
     }
 
+    public int getClientesServidos() {
+        return clientesServidos;
+    }
+
+    public String getNombre() { return nombre; }
+    public String getUbicacion() { return ubicacion; }
+    public String getTipoCocina() { return tipoCocina; }
+    public double getCalificacionMedia() { return calificacionMedia; }
+
+
     public double calcularIngresoEstimado() {
-        return 0.0;
+        return 0.0; // Se sobreescribe en subclases
     }
 
     public String mostrarDetalles() {
@@ -24,10 +37,7 @@ public class Restaurante {
                 "\nUbicación: " + ubicacion +
                 "\nCapacidad: " + capacidad +
                 "\nTipo de Cocina: " + tipoCocina +
-                "\nCalificación Media: " + calificacionMedia;
+                "\nCalificación Media: " + calificacionMedia +
+                "\nClientes Servidos: " + clientesServidos;
     }
-
-    public String getNombre() { return nombre; }
-    public String getUbicacion() { return ubicacion; }
-    public String getTipoCocina() { return tipoCocina; }
 }

@@ -5,8 +5,8 @@ public class RestauranteGourmet extends Restaurante {
     private double costoDegustacion;
 
     public RestauranteGourmet(String nombre, String ubicacion, int capacidad, String tipoCocina, double calificacionMedia,
-                              int numeroPlatosExclusivos, double costoDegustacion) {
-        super(nombre, ubicacion, capacidad, tipoCocina, calificacionMedia);
+                              int numeroPlatosExclusivos, double costoDegustacion,int clientesServidos) {
+        super(nombre, ubicacion, capacidad, tipoCocina, calificacionMedia, clientesServidos);
         this.numeroPlatosExclusivos = numeroPlatosExclusivos;
         this.costoDegustacion = costoDegustacion;
     }

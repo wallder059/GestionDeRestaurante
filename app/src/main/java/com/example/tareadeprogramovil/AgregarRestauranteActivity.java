@@ -1,22 +1,16 @@
 package com.example.tareadeprogramovil;
 
-import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AgregarRestauranteActivity extends AppCompatActivity {
 
-    EditText etNombre, etUbicacion, etCapacidad, etTipoCocina, etCalificacion;
+    EditText etNombre, etUbicacion, etCapacidad, etTipoCocina, etCalificacion, etClientesServidos;
     Button btnGuardar;
 
     @Override
@@ -29,7 +23,12 @@ public class AgregarRestauranteActivity extends AppCompatActivity {
         etCapacidad = findViewById(R.id.etCapacidad);
         etTipoCocina = findViewById(R.id.etTipoCocina);
         etCalificacion = findViewById(R.id.etCalificacion);
+        etClientesServidos = findViewById(R.id.etClientesServidos); // NUEVO
         btnGuardar = findViewById(R.id.btnGuardar);
+        Spinner spTipo = findViewById(R.id.spTipoRestaurante);
+
+
+
 
         btnGuardar.setOnClickListener(v -> {
             String nombre = etNombre.getText().toString();
@@ -37,11 +36,11 @@ public class AgregarRestauranteActivity extends AppCompatActivity {
             int capacidad = Integer.parseInt(etCapacidad.getText().toString());
             String tipoCocina = etTipoCocina.getText().toString();
             double calificacion = Double.parseDouble(etCalificacion.getText().toString());
+            int clientesServidos = Integer.parseInt(etClientesServidos.getText().toString());
 
-            Restaurante nuevoRestaurante = new Restaurante(nombre, ubicacion, capacidad, tipoCocina, calificacion);
-
+            // Ya no se crea el objeto, solo se pasa como string separado por ;
             Intent resultado = new Intent();
-            resultado.putExtra("nuevoRestaurante", nombre + ";" + ubicacion + ";" + capacidad + ";" + tipoCocina + ";" + calificacion);
+            resultado.putExtra("nuevoRestaurante", nombre + ";" + ubicacion + ";" + capacidad + ";" + tipoCocina + ";" + calificacion + ";" + clientesServidos);
             setResult(RESULT_OK, resultado);
             finish();
 

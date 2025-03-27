@@ -35,6 +35,16 @@
             android:layout_height="wrap_content"
             android:hint="Calificación media"
             android:inputType="numberDecimal"/>
+        <EditText
+            android:id="@+id/etClientesServidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Clientes Servidos"
+            android:inputType="number"/>
+        <Spinner
+            android:id="@+id/spTipoRestaurante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/btnGuardar"
@@ -42,5 +52,6 @@
             android:layout_height="wrap_content"
             android:text="Guardar"
             android:layout_marginTop="12dp"/>
+
     </LinearLayout>
 </ScrollView>

@@ -13,16 +13,24 @@
         android:hint="Buscar por ubicación o cocina"
         android:drawableLeft="@android:drawable/ic_menu_search" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvRestaurantes"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="12dp"/>
     <Button
         android:id="@+id/btnAgregarRestaurante"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Agregar Nuevo Restaurante"
         android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnResumen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mostrar resumen de clientes servidos"
+        android:layout_marginTop="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRestaurantes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp"/>
 </LinearLayout>

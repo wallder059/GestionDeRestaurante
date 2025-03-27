@@ -5,8 +5,8 @@ public class RestauranteCasual extends Restaurante {
     private double costoMenuFijo;
 
     public RestauranteCasual(String nombre, String ubicacion, int capacidad, String tipoCocina, double calificacionMedia,
-                             boolean menuFijo, double costoMenuFijo) {
-        super(nombre, ubicacion, capacidad, tipoCocina, calificacionMedia);
+                             boolean menuFijo, double costoMenuFijo,int clientesServidos) {
+        super(nombre, ubicacion, capacidad, tipoCocina, calificacionMedia,clientesServidos);
         this.menuFijo = menuFijo;
         this.costoMenuFijo = costoMenuFijo;
     }
